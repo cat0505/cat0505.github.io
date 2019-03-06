@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>忽如远行客</title>
-  
+  <icon>https://www.gravatar.com/avatar/cccd8c60c09f9d87466d6201f5ee7f33</icon>
   <subtitle>人生天地间，忽如远行客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -11,7 +11,7 @@
   
   <author>
     <name>二次元阿宅</name>
-    
+    <email>此处省略</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
