@@ -40,7 +40,7 @@
 <meta property="og:site_name" content="忽如远行客">
 <meta property="og:description" content="一、遗传算法基本知识 1.遗传算法的遗传操作：选择、交叉、变异（选择出好的近似解，然后进行交叉和变异，就会产生新的种群） 交叉(crossover)：两个染色体的某一相同位置处DNA被切断，前后两串分别交叉组合形成两个新的染色体。也称基因重组或杂交； 2.遗传算法的核心内容：参数编码、初识群体的设定、适应度函数的设计、遗传操作设计、控制参数 适应度：度量某个物种对于生存环境的适应程度。 3.遗传问">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-31T11:36:13.402Z">
+<meta property="og:updated_time" content="2019-04-01T09:09:40.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初识遗传算法">
 <meta name="twitter:description" content="一、遗传算法基本知识 1.遗传算法的遗传操作：选择、交叉、变异（选择出好的近似解，然后进行交叉和变异，就会产生新的种群） 交叉(crossover)：两个染色体的某一相同位置处DNA被切断，前后两串分别交叉组合形成两个新的染色体。也称基因重组或杂交； 2.遗传算法的核心内容：参数编码、初识群体的设定、适应度函数的设计、遗传操作设计、控制参数 适应度：度量某个物种对于生存环境的适应程度。 3.遗传问">
@@ -213,9 +213,10 @@
 <p>总结：遗传算法不需要费心去寻找最优解，而是把那些不好的存在抹杀就可以了.</p>
 <p>三、遗传算法的具体实现</p>
 <p>1、编码</p>
-<p>遗传算法的编码主要有三类：二进制编码、浮点编码、符号编码</p>
+<p>遗传算法的编码主要有三类：二进制编码、浮点编码、符号编码、量子编码</p>
 <p>1.1二进制编码：就是用0和1进行编码</p>
 <p>二进制编码的缺点：个体长度较短的时候，可能达不到精度的要求；个体长度较大的手，会增加遗传算的搜索空间（当个体的长度较短的时候，比如只有两个01、00、10、11，假设寻找会使人的头发显现黑色基因，通过最简单的比较就可知道那两个比较好，假设是11和10，利用这两个进行杂交会出现的结果就是10和11，这时候就无法判断到底是哪个比较好了）（当个体的长度过长的手，交叉或者变异之后的变数会增大，会给搜索最佳算法增加难度）</p>
+<p>假设用ｎ位二进制来编码，则二进制编码的精度是（Umax-Umin）/(2^n-1),</p>
 <p>1.2浮点编码：个体的每个基因值用某一范围内的一个浮点数来表示</p>
 <p>浮点编码的优点：</p>
 <p>适用于在遗传算法中表示范围较大的数值</p>
@@ -223,6 +224,8 @@
 <p>适用于较大空间的遗传搜索</p>
 <p>降低了遗传算法的计算复杂性，提高了运算的速率</p>
 <p>1.3符号编码法</p>
+<p>1.4量子编码方法</p>
+<p>每一个量子位除了0或者1以外，还可以处于两者的叠加状态，叠加状态是指0和1的任意线性叠加。</p>
 <p>2、袋鼠的染色体编码</p>
 <p>3、评价个体的适应度-适应度函数</p>
 <p>4、选择函数</p>
@@ -259,7 +262,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-03-31T11:36:13.402Z" itemprop="dateUpdated">2019-03-31 19:36:13</time>
+    Last updated: <time datetime="2019-04-01T09:09:40.084Z" itemprop="dateUpdated">2019-04-01 17:09:40</time>
 </span><br>
 
 
@@ -291,7 +294,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/03/31/基于遗传算法的无限传感器网络的优化/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">基于遗传算法的无限传感器网络的优化</h4>
+      </a>
+    </div>
   
 
   

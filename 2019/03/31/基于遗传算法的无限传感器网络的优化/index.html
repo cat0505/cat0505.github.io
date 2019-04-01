@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>基于遗传算法的无限传感器网络的优化 | 忽如远行客 | 人生天地间，忽如远行客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+
+
+
+    
+    <meta name="theme-color" content="e2e0f3">
+	
+
+
+    
+    
+    <meta name="keywords" content="遗传算法 无线传感器网络优化">
+
+
+
+
+    <meta name="description" content="一、摘要 无线传感器网络=若干个传感器节点（低成本、低功耗、多功能） 有线网络布网费用高，维护繁琐 无线传感器网络的最大问题：无线床啊其节点的能量消耗极大，限制了网络的工作寿命 二、绪论 2.1 课题的研究背景以及研究的意义 无线传感器网络的研究起源于…… 无线传感器网络=无线通信技术+大量的传感器节点+自组织方式 大面积环境的数据+不适宜部署有线网络的领域 无线传感器网络具有成本低、鲁棒性高、功">
+<meta name="keywords" content="遗传算法 无线传感器网络优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于遗传算法的无限传感器网络的优化">
+<meta property="og:url" content="http://yoursite.com/2019/03/31/基于遗传算法的无限传感器网络的优化/index.html">
+<meta property="og:site_name" content="忽如远行客">
+<meta property="og:description" content="一、摘要 无线传感器网络=若干个传感器节点（低成本、低功耗、多功能） 有线网络布网费用高，维护繁琐 无线传感器网络的最大问题：无线床啊其节点的能量消耗极大，限制了网络的工作寿命 二、绪论 2.1 课题的研究背景以及研究的意义 无线传感器网络的研究起源于…… 无线传感器网络=无线通信技术+大量的传感器节点+自组织方式 大面积环境的数据+不适宜部署有线网络的领域 无线传感器网络具有成本低、鲁棒性高、功">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-01T09:09:45.074Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基于遗传算法的无限传感器网络的优化">
+<meta name="twitter:description" content="一、摘要 无线传感器网络=若干个传感器节点（低成本、低功耗、多功能） 有线网络布网费用高，维护繁琐 无线传感器网络的最大问题：无线床啊其节点的能量消耗极大，限制了网络的工作寿命 二、绪论 2.1 课题的研究背景以及研究的意义 无线传感器网络的研究起源于…… 无线传感器网络=无线通信技术+大量的传感器节点+自组织方式 大面积环境的数据+不适宜部署有线网络的领域 无线传感器网络具有成本低、鲁棒性高、功">
+    
+        <link rel="alternate" type="application/atom+xml" title="忽如远行客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avator.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">二次元阿宅</h5>
+          <a href="mailto:此处省略" title="此处省略" class="mail">此处省略</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                历史文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom">
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">基于遗传算法的无限传感器网络的优化</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">基于遗传算法的无限传感器网络的优化</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-03-31T14:36:18.000Z" itemprop="datePublished" class="page-time">
+  2019-03-31
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学士论文相关/">学士论文相关</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-基于遗传算法的无限传感器网络的优化" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">基于遗传算法的无限传感器网络的优化</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-03-31 22:36:18" datetime="2019-03-31T14:36:18.000Z" itemprop="datePublished">2019-03-31</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学士论文相关/">学士论文相关</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>一、摘要</p>
+<p>无线传感器网络=若干个传感器节点（低成本、低功耗、多功能）</p>
+<p>有线网络布网费用高，维护繁琐</p>
+<p>无线传感器网络的最大问题：无线床啊其节点的能量消耗极大，限制了网络的工作寿命</p>
+<p>二、绪论</p>
+<p>2.1 课题的研究背景以及研究的意义</p>
+<p>无线传感器网络的研究起源于……</p>
+<p>无线传感器网络=无线通信技术+大量的传感器节点+自组织方式</p>
+<p>大面积环境的数据+不适宜部署有线网络的领域</p>
+<p>无线传感器网络具有成本低、鲁棒性高、功耗小、灵活性高、布网简单、智能化强、维护便捷</p>
+<p>2.2 遗传算法的发展</p>
+<p>遗传算法 高度并行 随机 自适应</p>
+<p>基本理念来源于达尔文的遗传学说</p>
+<p>GA在理论上具有解决任何寻优问题的能力，具有极其广泛的应用价值。</p>
+<p>Holland教授 模式定理：优良个体的样本数目将以指数规律增长，从而确保了遗传算法是 一个能够用来搜寻最优可行解的过程。</p>
+<p>2.3无线传感器网络研究的发展状况</p>
+<p>2003年，美国《技术评论》杂志评出了对人类未来生活产生重大影响的新兴科技，被列为第一位的就是无线传感网络技术。</p>
+<p>无线传感器网络最开始被用在军事的监视系统中</p>
+<p>无线传感网络是集通信技术、传感器技术和计算技术于一身的产物</p>
+<p>2.4 本文的应用背景</p>
+<p>无线传感器在露天矿场的边坡检测的例子</p>
+<p>2.5本文研究目的和主要任务</p>
+<p>无线传感器网络最难解决的缺点是：和有线网络相比，无线传感器网络的工作周期极大的受到能源的限制。充电或者更换电池会限制网络中的节点的通信和数据的处理，但是个别节点失灵不会影响整体的工作。</p>
+<p>优化无线传感器网络的关键是延长整个网络的工作寿命。</p>
+<p>2.6 本文的创新点</p>
+<p>三、无线传感网络</p>
+<p>无线传感网络是……</p>
+<p>无线传感网络可以分为动态网络和静态网络两种。</p>
+<p>3.1无线传感网络结构</p>
+<p>无线传感网路主要由传感器节点、任务管理节点、汇聚节点组成。</p>
+<p>传感器节点采集到的数据通过多跳网络或者单跳网络传输到簇头，再到汇聚节点，最终通过卫星或者互联网传输到管理节点。</p>
+<p>传感器节点一般是微型的嵌入式系统，能力较弱，通过携带电池通电。无线传感器网络中汇聚节点的能力比较强，传感器网络和外部网络就是通过汇聚节点相连接的。</p>
+<p>对于多跳网络来说，每个传感器节点必须兼顾终端和路由器的功能，主要功能：信息采集、数据存储和再次的转发。</p>
+<p>对于单跳的网络来说，簇头节点就是路由器和终端。</p>
+<p>3.2无线传感网络的特点</p>
+<p>无线传感器网络相对于其他传统网络的特点：</p>
+<p>组网的规模够大，可以进行动态组网或者静态组网，而且容错性加强</p>
+<p>单跳、多跳、自组织：传感器的通信距离是有限的，当超过一定的距离的时候，自动组成簇，通过多跳的方式从簇头传递到汇聚节点。</p>
+<p>低功耗：环境恶劣，更换电池不容易，所以传感器节点必须是低功耗的。</p>
+<p>数据作为中心：传统网络中，每一个工作节点必须在全网中有唯一的一个编号作为其通信地址；但是在无线传感器网路中，获得所需要的数据是第一要务，数据是从哪里来的是不重要的。</p>
+<p>通信的覆盖范围较小。</p>
+<p>数据处理：传统网络的主要职责是数据传输，自终端上处理数据，中间的节点仅仅负责传输数据；但是对于无线传感网络来说，中间节点同时具备数据传输和数据处理的功能。</p>
+<p>低成本：每个传感器节点都应该低成本，低价格。</p>
+<p>3.3无线传感网络节点结构</p>
+<p>传感网络节点的组成通常是由四部分组成的：处理器模块、传感器模块、能量供应模块、无线通信模块</p>
+<p>数据采集、数据传递、数据处理和能量供应</p>
+<p>3.4传感器节点的限制因素</p>
+<p>电源能量有限：处理器和传感器浪费的能量少，主要消耗在无线通信模块。（此处可以配图说明）</p>
+<p>通信能力有限：E=kd^n。其中参数n的取值在2到4之间，干扰越大n的取值也越大，n的取值通常设置为3，随着距离的增加，能量的损耗也会增加，所以传感器之间的距离应该在100米以内。</p>
+<p>四、遗传算法概述</p>
+<p>遗传算法受到了生物进化理论的启发，GA以自然界中的优胜劣汰和生物遗传机制作为理论的基础。</p>
+<p>简单阐述遗传算法的概念。</p>
+<p>4.1基本遗传算法</p>
+<p>Goldberg研究出的传统的GA，只使用选择算子、交叉算子和变异算子，是GA的雏形。</p>
+<p>编码方式：</p>
+<p>二进制编码、浮点数编码</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-04-01T09:09:45.074Z" itemprop="dateUpdated">2019-04-01 17:09:45</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2019/03/31/基于遗传算法的无限传感器网络的优化/" target="_blank" rel="external">http://yoursite.com/2019/03/31/基于遗传算法的无限传感器网络的优化/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avator.jpg" alt="二次元阿宅">
+            二次元阿宅
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/遗传算法-无线传感器网络优化/">遗传算法 无线传感器网络优化</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/03/31/初识遗传算法/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">初识遗传算法</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>二次元阿宅 &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
