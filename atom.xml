@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-04T02:46:15.101Z</updated>
+  <updated>2019-04-04T06:20:37.570Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MATLAB基本操作</title>
+    <link href="http://yoursite.com/2019/04/04/matlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2019/04/04/matlab基本操作/</id>
+    <published>2019-04-04T02:51:38.000Z</published>
+    <updated>2019-04-04T06:20:37.570Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、交互式命令操作</p><p>1.命令行</p><p>一个命令行可以输入若干条命令，各个命令之间用逗号隔开，如果前一个后面有分号，就不用逗号</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p=15,m=36//此时运行会显示p和m的值</span><br><span class="line">p=15；m=36//此时运行只会显示m的值</span><br></pre></td></tr></table></figure><p>2.续行符</p><p>假如第一行比较长的话，可以在第一行最后加上三个小黑点。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p=15,...</span><br><span class="line">    m=1</span><br></pre></td></tr></table></figure><p>3.命令行的编辑</p><p>4.注释</p><p>注释以%开头</p><p>二、MATLAB功能演示</p><img src="/2019/04/04/matlab基本操作/函数图像.jpg" title="函数图像">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;一、交互式命令操作&lt;/p&gt;
+&lt;p&gt;1.命令行&lt;/p&gt;
+&lt;p&gt;一个命令行可以输入若干条命令，各个命令之间用逗号隔开，如果前一个后面有分号，就不用逗号&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutte
+      
+    
+    </summary>
+    
+      <category term="MATLAB" scheme="http://yoursite.com/categories/MATLAB/"/>
+    
+    
+      <category term="基本操作，MATLAB" scheme="http://yoursite.com/tags/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%EF%BC%8CMATLAB/"/>
+    
+  </entry>
   
   <entry>
     <title>学士论文目录大纲</title>
