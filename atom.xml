@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-06T01:39:08.733Z</updated>
+  <updated>2019-04-06T02:31:46.858Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MATLAB数值数据</title>
+    <link href="http://yoursite.com/2019/04/06/MATLAB%E6%95%B0%E5%80%BC%E6%95%B0%E6%8D%AE/"/>
+    <id>http://yoursite.com/2019/04/06/MATLAB数值数据/</id>
+    <published>2019-04-06T01:43:50.000Z</published>
+    <updated>2019-04-06T02:31:46.858Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、matlab数值数据</p><p>1.数值数据类型的分类</p><hr><p>整型</p><p>分为有符号数和无符号数：8、16、32、64</p><hr><p>浮点型</p><p>matlab中浮点型的默认类型是double，浮点型分为single和double，分别是4和8</p><hr><p>复型</p><p>分为实部和虚部，全部默认是双精度类型，其中虚部可以用i或者j表示</p><p>class函数可以用于获取某个数值的类型</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">程序：</span><br><span class="line">class(9)</span><br><span class="line">结果：</span><br><span class="line">ans =</span><br><span class="line">double</span><br></pre></td></tr></table></figure><hr><p>2.数据的输出格式</p><p>matlab内部的数据都是用双精度存储的，可以用format改变数据输出个格式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">format 格式符</span><br></pre></td></tr></table></figure><p>matlab默认的格式是short</p><p>二、matlab矩阵的表示</p><p>1.矩阵的建立</p><hr><p>利用直接输入法创建矩阵</p><p>矩阵中的元素用中括号括起来，按照行的顺序输入矩阵，同一行之间用逗号或者空格间隔，不同行的元素之间用分号间隔。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">程序：</span><br><span class="line">A=[1,2,3;4,5,6;7,8,9]</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">A =</span><br><span class="line">     1     2     3</span><br><span class="line">     4     5     6</span><br><span class="line">     7     8     9</span><br></pre></td></tr></table></figure><hr><p>利用已经创建好的矩阵建立更大的矩阵</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">程序：</span><br><span class="line">A=[1,2,3;4,5,6;7,8,9]</span><br><span class="line">B=[-1,-2,-3;-4,-5,-6;-7,-8,-9]</span><br><span class="line">C=[A,B;B,A]</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">C =</span><br><span class="line">     1     2     3    -1    -2    -3</span><br><span class="line">     4     5     6    -4    -5    -6</span><br><span class="line">     7     8     9    -7    -8    -9</span><br><span class="line">    -1    -2    -3     1     2     3</span><br><span class="line">    -4    -5    -6     4     5     6</span><br><span class="line">    -7    -8    -9     7     8     9</span><br></pre></td></tr></table></figure><p>还可以用实部矩阵和虚部矩阵，构成复数矩阵</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">程序：</span><br><span class="line">R=[1,2,3;4,5,6]</span><br><span class="line">I=[6,7,8;9,10,11]</span><br><span class="line">ri=R+i*I</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"></span><br><span class="line">ri =</span><br><span class="line">   1.0000 + 6.0000i   2.0000 + 7.0000i   3.0000 + 8.0000i</span><br><span class="line">   4.0000 + 9.0000i   5.0000 +10.0000i   6.0000 +11.0000i</span><br></pre></td></tr></table></figure><hr><p>二、冒号表达式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e1:e2:e3 %e1为初始值,e2为步长，e3为终止值</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">linspace(a,b,n) %a,b代表初始值和终止值，其中n代表产生的元素的个数</span><br></pre></td></tr></table></figure><hr><p>三、矩阵元素的引用</p><p>1.矩阵元素的引用方式</p><hr><p>矩阵元素通过下标来引用</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A(3,2)=200 %表示矩阵A第三行第二列的元素</span><br></pre></td></tr></table></figure><p>如果给出的矩阵下标大于原来的行数或者列数，matlab会将矩阵自动扩充，扩充的矩阵元素置为0</p><hr><p>矩阵元素通过序号来引用</p><p>矩阵元素按照列来存储</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">程序：</span><br><span class="line">A=[1,2,3;4,5,6]</span><br><span class="line">A(3)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">A=</span><br><span class="line">    1     2     3</span><br><span class="line">    4     5     6</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line">    2</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;一、matlab数值数据&lt;/p&gt;
+&lt;p&gt;1.数值数据类型的分类&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;整型&lt;/p&gt;
+&lt;p&gt;分为有符号数和无符号数：8、16、32、64&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;浮点型&lt;/p&gt;
+&lt;p&gt;matlab中浮点型的默认类型是double，浮点型分为single和do
+      
+    
+    </summary>
+    
+      <category term="MATLAB" scheme="http://yoursite.com/categories/MATLAB/"/>
+    
+    
+      <category term="MATLAB" scheme="http://yoursite.com/tags/MATLAB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MATLAB基本操作</title>
     <link href="http://yoursite.com/2019/04/04/matlab%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
     <id>http://yoursite.com/2019/04/04/matlab基本操作/</id>
     <published>2019-04-04T02:51:38.000Z</published>
-    <updated>2019-04-06T01:39:08.733Z</updated>
+    <updated>2019-04-06T01:43:57.284Z</updated>
     
     <content type="html"><![CDATA[<p>一、交互式命令操作</p><p>1.命令行</p><p>一个命令行可以输入若干条命令，各个命令之间用逗号隔开，如果前一个后面有分号，就不用逗号</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p=15,m=36//此时运行会显示p和m的值</span><br><span class="line">p=15；m=36//此时运行只会显示m的值</span><br></pre></td></tr></table></figure><p>2.续行符</p><p>假如第一行比较长的话，可以在第一行最后加上三个小黑点。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p=15,...</span><br><span class="line">    m=1</span><br></pre></td></tr></table></figure><p>3.命令行的编辑</p><p>4.注释</p><p>注释以%开头</p><p>二、MATLAB功能演示</p><hr><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x=-2*pi:pi/180:2*pi;</span><br><span class="line">plot(x,2.^(-abs(x)),&apos;:&apos;,x,sin(x));</span><br></pre></td></tr></table></figure><img src="/2019/04/04/matlab基本操作/函数图像.jpg" title="函数图像"><hr><p>求方程<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>2</mn><mi mathvariant="italic">X</mi><msup><mrow></mrow><mrow><mn>5</mn></mrow></msup><mo>&#x2D;</mo><mn>3</mn><mi mathvariant="italic">X</mi><msup><mrow></mrow><mrow><mn>3</mn></mrow></msup><mo>&#x2B;</mo><mn>7</mn><mn>1</mn><mi mathvariant="italic">X</mi><msup><mrow></mrow><mrow><mn>2</mn></mrow></msup><mo>&#x2D;</mo><mn>9</mn><mi mathvariant="italic">X</mi><mo>&#x2B;</mo><mn>1</mn><mn>3</mn><mo>&#x3D;</mo><mn>0</mn></mrow></math>的全部根。</p><p>程序代码是：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p=[2,0,-3,71,-9,13]; %建立多项式系数向量</span><br><span class="line">x=roots(p) %调用root函数求解方程组的全部根</span><br></pre></td></tr></table></figure><p>求得的结果是：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x =</span><br><span class="line">  -3.4914 + 0.0000i</span><br><span class="line">   1.6863 + 2.6947i</span><br><span class="line">   1.6863 - 2.6947i</span><br><span class="line">   0.0594 + 0.4251i</span><br><span class="line">   0.0594 - 0.4251i</span><br></pre></td></tr></table></figure><hr><p>求解线性方程</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2x+3y-z=0</span><br><span class="line">8x+2y+3Z=4</span><br><span class="line">45x+3y+9z=23</span><br></pre></td></tr></table></figure><p>程序如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=[2,3,-1;8,2,3;45,3,9];</span><br><span class="line">b=[2;4;23];</span><br><span class="line">x=inv(a)*b %inv(a)用于求a的逆矩阵</span><br></pre></td></tr></table></figure><p>运行结果如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x =</span><br><span class="line">    0.5531</span><br><span class="line">    0.2051</span><br><span class="line">   -0.2784</span><br></pre></td></tr></table></figure><hr><p>求解<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mo>&#x222B;</mo><mrow><mn>1</mn></mrow><mrow><mn>0</mn></mrow></msubsup><mrow><mi mathvariant="italic">x</mi><mi mathvariant="italic">l</mi><mi mathvariant="italic">n</mi><mo>&#x28;</mo><mn>1</mn><mo>&#x2B;</mo><mi mathvariant="italic">x</mi><mo>&#x29;</mo><mi mathvariant="italic">d</mi><mi mathvariant="italic">x</mi></mrow></mrow></math></p><p>程序如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f=@(x) x.*log(1+x);</span><br><span class="line">integral(f,0,1)</span><br></pre></td></tr></table></figure><p>结果如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ans =</span><br><span class="line">    0.2500</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -40,7 +72,9 @@
       <category term="MATLAB" scheme="http://yoursite.com/categories/MATLAB/"/>
     
     
-      <category term="基本操作，MATLAB" scheme="http://yoursite.com/tags/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%EF%BC%8CMATLAB/"/>
+      <category term="MATLAB" scheme="http://yoursite.com/tags/MATLAB/"/>
+    
+      <category term="基本操作" scheme="http://yoursite.com/tags/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
     
   </entry>
   
