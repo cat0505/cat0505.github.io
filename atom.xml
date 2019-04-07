@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-06T04:13:46.943Z</updated>
+  <updated>2019-04-07T02:26:41.059Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MATLAB常用内部函数</title>
+    <link href="http://yoursite.com/2019/04/07/MATLAB%E5%B8%B8%E7%94%A8%E5%86%85%E9%83%A8%E5%87%BD%E6%95%B0/"/>
+    <id>http://yoursite.com/2019/04/07/MATLAB常用内部函数/</id>
+    <published>2019-04-07T02:26:40.000Z</published>
+    <updated>2019-04-07T02:26:41.059Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>MATLAB数值数据</title>
