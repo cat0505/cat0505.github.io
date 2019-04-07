@@ -31,6 +31,34 @@
   </entry>
   
   <entry>
+    <title>matlab变量及其操作</title>
+    <link href="http://yoursite.com/2019/04/07/matlab%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2019/04/07/matlab变量及其操作/</id>
+    <published>2019-04-07T01:58:12.000Z</published>
+    <updated>2019-04-07T03:25:06.370Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、变量与赋值语句</p><p>在matlab中，变量是字母为开头，后接字母、数字或者下划线的。</p><p>matlab区分大小写，标准函数必须用小写字母。</p><p>求解<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{5&plus;cos47^{\circ}}{1&plus;|x-y|}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\frac{5&plus;cos47^{\circ}}{1&plus;|x-y|}" title="\frac{5+cos47^{\circ}}{1+|x-y|}"></a>，其中<a href="https://www.codecogs.com/eqnedit.php?latex=x=\sqrt{7}-2i" target="_blank"><img src="https://latex.codecogs.com/png.latex?x=\sqrt{7}-2i" title="x=\sqrt{7}-2i"></a>，<a href="https://www.codecogs.com/eqnedit.php?latex=y=e^{\frac{pi}{2{\color{Blue}&space;}}}" target="_blank"><img src="https://latex.codecogs.com/png.latex?y=e^{\frac{pi}{2{\color{Blue}&space;}}}" title="y=e^{\frac{pi}{2{\color{Blue} }}}"></a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">程序：</span><br><span class="line">x=sqrt(7)-2i;</span><br><span class="line">y=exp(pi/2);</span><br><span class="line">z=(5+cos(47*pi/180))/(1+abs(x-y))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">z =</span><br><span class="line">    1.4395</span><br></pre></td></tr></table></figure><hr><p>二、预定义变量</p><p>尽量不要使用i和j做变量名，当有复数运算的时候，可能会出现错误。</p><hr><p>三、变量的管理</p><p>1.内存变量的删除与修改</p><p>who可以显示当前变量，whos可以显示详细的信息</p><p>2.内存变量文件</p><p>可以使用save和load命令，把当前有用的一些变量的数值保存下来。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">save 文件名 [变量名表]</span><br><span class="line">load 文件名 [变量名表]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;一、变量与赋值语句&lt;/p&gt;
+&lt;p&gt;在matlab中，变量是字母为开头，后接字母、数字或者下划线的。&lt;/p&gt;
+&lt;p&gt;matlab区分大小写，标准函数必须用小写字母。&lt;/p&gt;
+&lt;p&gt;求解&lt;a href=&quot;https://www.codecogs.com/eqnedit.php?
+      
+    
+    </summary>
+    
+      <category term="MATLAB" scheme="http://yoursite.com/categories/MATLAB/"/>
+    
+    
+      <category term="MATLAB" scheme="http://yoursite.com/tags/MATLAB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MATLAB数值数据</title>
     <link href="http://yoursite.com/2019/04/06/MATLAB%E6%95%B0%E5%80%BC%E6%95%B0%E6%8D%AE/"/>
     <id>http://yoursite.com/2019/04/06/MATLAB数值数据/</id>
