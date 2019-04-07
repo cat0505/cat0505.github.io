@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[matlab运算以及字符串]]></title>
+    <url>%2F2019%2F04%2F07%2Fmatlab%E8%BF%90%E7%AE%97%E4%BB%A5%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%2F</url>
+    <content type="text"><![CDATA[一、算术运算 1.基本算术运算 矩阵加减运算 矩阵A和矩阵B必须是同型的矩阵 一个标量也可以和矩阵进行加减运算，这时把标量和矩阵中的每一个元素进行加减 1234567891011程序：A=[4,3;2,6]B=A-1结果：A = 4 3 2 6B = 3 2 1 5 矩阵乘法 矩阵乘法要求前一个的行和后一个的列相同 一个标量也可以和矩阵进行乘法运算 矩阵除法 矩阵除法有两种，一种是左除，一种是右除 A\B等效于A的逆左乘B矩阵 B/A等效于A的逆右乘矩阵B 矩阵的乘方 A^x要求A是矩阵，x是标量 2.点运算 两个矩阵进行点运算是指他们的对应元素进行相关的运算。 二、关系运算 符号 英文 &lt; lt &lt;= le &gt; gt &gt;= ge = eq ~= ne 两个标量相互比较，结果仍旧是标量 标量和矩阵进行比较，结果是矩阵 矩阵和矩阵进行比较，结果是矩阵 三、逻辑运算 and、or、not 矩阵和矩阵=矩阵 矩阵和标量=矩阵 标量和标量=标量 一、字符串的表示 在matlab中，字符串是用单引号括起来的字符序列，若字符串中的字符含有单引号，则该单引号字符要用两个单引号来表示 12将字符串倒排序revch=ch(end:-1:1) 二、字符串的操作 1.字符串的执行 eval作用是把字符串的内容作为对应的matlab命令来执行 12345678程序：t=pi;m=&apos;[t,sin(t),cos(t)]&apos;;y=eval(m)结果：y = 3.1416 0.0000 -1.0000 2.字符串和数值之间的转换 1234567程序：s1=&apos;matlab&apos;a=abs(s1)结果：a = 109 97 116 108 97 98 3.字符串的连接 要将字符串连接起来，有两个方法：字符串向量、strcat函数 1234567字符串向量：中括号将若干个字符串括起来程序：[&apos;study&apos;,&apos;hard&apos;]结果：ans =studyhard 123456strcat函数可以将若干个函数连接起来程序：strcat(&apos;study&apos;,&apos;hard&apos;)结果：ans =studyhard 4.字符串的比较 关系运算符或者字符串比较函数 123456利用关系运算符，比较的规则就是按照ASCII码逐个比较程序：&apos;wwwwz&apos;&gt;=&apos;qwert&apos;结果：ans = 1 1 1 1 1 1234strcmp(s1.s2) %用来比较两个字符串是否相等strcmp(s1,s2,n) %用来比较前n个字符串是否相等strcmpi(s1,s2) %忽略字母大小写，用来比较两个字符串是否相等strcmpi(s1,s2,n) %忽略字母的大小写，用来比较前n个字符是否相等 5.字符串的查找和替换 12findstr(s1,s2) %返回长的字符串在长的字符串中的开始位置strrep(s1,s2,s3) %将s1中的所有s2子字符串替换s3]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MATLAB常用内部函数]]></title>
     <url>%2F2019%2F04%2F07%2FMATLAB%E5%B8%B8%E7%94%A8%E5%86%85%E9%83%A8%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[一、常用数学函数 三角函数有以弧度为单位和角度为单位的，以角度为单位的函数在后面加上d abs可以求实数的绝对值、复数的模、字符串的ASCII码值 二、矩阵的超越函数 1.矩阵平方根 sqrtm(A)用来计算A的平方根123456789101112程序：A=[4,3;2,6]B=sqrtm(A)结果：A = 4 3 2 6B = 1.9171 0.6978 0.4652 2.3823 2.矩阵对数 logm(A)计算矩阵A的自然对数 3.矩阵指数 expm(A)求矩阵指数 4.普通矩阵函数 funm(A,@fun)对方阵A计算由fun定义的函数的矩阵函数值 但是不可以用sqrtm]]></content>
