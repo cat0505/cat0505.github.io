@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[MATLAB常用内部函数]]></title>
     <url>%2F2019%2F04%2F07%2FMATLAB%E5%B8%B8%E7%94%A8%E5%86%85%E9%83%A8%E5%87%BD%E6%95%B0%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[一、常用数学函数 三角函数有以弧度为单位和角度为单位的，以角度为单位的函数在后面加上d abs可以求实数的绝对值、复数的模、字符串的ASCII码值 二、矩阵的超越函数 1.矩阵平方根 sqrtm(A)用来计算A的平方根123456789101112程序：A=[4,3;2,6]B=sqrtm(A)结果：A = 4 3 2 6B = 1.9171 0.6978 0.4652 2.3823 2.矩阵对数 logm(A)计算矩阵A的自然对数 3.矩阵指数 expm(A)求矩阵指数 4.普通矩阵函数 funm(A,@fun)对方阵A计算由fun定义的函数的矩阵函数值 但是不可以用sqrtm]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>MATLAB</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[matlab变量及其操作]]></title>

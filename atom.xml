@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-07T02:26:41.059Z</updated>
+  <updated>2019-04-07T03:43:41.850Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,12 +21,29 @@
     <link href="http://yoursite.com/2019/04/07/MATLAB%E5%B8%B8%E7%94%A8%E5%86%85%E9%83%A8%E5%87%BD%E6%95%B0/"/>
     <id>http://yoursite.com/2019/04/07/MATLAB常用内部函数/</id>
     <published>2019-04-07T02:26:40.000Z</published>
-    <updated>2019-04-07T02:26:41.059Z</updated>
+    <updated>2019-04-07T03:43:41.850Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、常用数学函数</p><p>三角函数有以弧度为单位和角度为单位的，以角度为单位的函数在后面加上d</p><p>abs可以求实数的绝对值、复数的模、字符串的ASCII码值</p><hr><p>二、矩阵的超越函数</p><p>1.矩阵平方根</p><p>sqrtm(A)用来计算A的平方根<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">程序：</span><br><span class="line">A=[4,3;2,6]</span><br><span class="line">B=sqrtm(A)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">A =</span><br><span class="line">     4     3</span><br><span class="line">     2     6</span><br><span class="line"></span><br><span class="line">B =</span><br><span class="line">    1.9171    0.6978</span><br><span class="line">    0.4652    2.3823</span><br></pre></td></tr></table></figure></p><hr><p>2.矩阵对数</p><p>logm(A)计算矩阵A的自然对数</p><hr><p>3.矩阵指数</p><p>expm(A)求矩阵指数<a href="https://www.codecogs.com/eqnedit.php?latex=e^{A}" target="_blank"><img src="https://latex.codecogs.com/png.latex?e^{A}" title="e^{A}"></a></p><hr><p>4.普通矩阵函数</p><p>funm(A,@fun)对方阵A计算由fun定义的函数的矩阵函数值</p><p>但是不可以用sqrtm</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;一、常用数学函数&lt;/p&gt;
+&lt;p&gt;三角函数有以弧度为单位和角度为单位的，以角度为单位的函数在后面加上d&lt;/p&gt;
+&lt;p&gt;abs可以求实数的绝对值、复数的模、字符串的ASCII码值&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;二、矩阵的超越函数&lt;/p&gt;
+&lt;p&gt;1.矩阵平方根&lt;/p&gt;
+&lt;p&gt;sqrtm
+      
+    
     </summary>
     
+      <category term="MATLAB" scheme="http://yoursite.com/categories/MATLAB/"/>
+    
+    
+      <category term="MATLAB" scheme="http://yoursite.com/tags/MATLAB/"/>
     
   </entry>
   
