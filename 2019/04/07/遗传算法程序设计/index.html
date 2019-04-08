@@ -104,7 +104,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://latex.codecogs.com/png.latex?f(x)=9*sin(5x)+8*cos(4x)">
 <meta property="og:image" content="https://latex.codecogs.com/png.latex?x\epsilon&space;[0,15]">
-<meta property="og:updated_time" content="2019-04-07T09:38:54.333Z">
+<meta property="og:updated_time" content="2019-04-08T01:08:32.475Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="遗传算法程序设计">
 <meta name="twitter:description" content="一、程序设计 假设求函数,   1.初始化 12345%种群初始化function pop=initpop(popsize,chromlength)pop=round(rand(popsizechromlength));%rand随机产生每个单元为【0，1】行数为popsize，列数为chromlength的矩阵%round对每个矩阵进行圆整 initpop函数的功能是实现群体的初始化，popsi">
@@ -402,7 +402,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  692
+                  982
                 </span>
               
 
@@ -462,6 +462,21 @@
 <p>8.主程序</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">popsize=20;</span><br><span class="line">chromlength=10;</span><br><span class="line">pc=0.7;</span><br><span class="line">pm=0.005;</span><br><span class="line">pop=initpop(popsize,chromlength);</span><br><span class="line">for i=1:20 %迭代次数</span><br><span class="line">    [objvalue]=calobjvalue(pop);</span><br><span class="line">    fitvalue=calfitvalue(objvalue);</span><br><span class="line">    [newpop]=selection(pop,fitvalue);</span><br><span class="line">    [newpop]=crossover(pop,pc);</span><br><span class="line">    [newpop]=mutation(pop,pm);</span><br><span class="line">    [bestindividual,bestfit]=best(pop,fitvalue);</span><br><span class="line">    y(i)=max(bestfit);</span><br><span class="line">    n(i)=i</span><br><span class="line">    pop5=bestindividual;</span><br><span class="line">    x(i)=decodechrom(pop5,1,chromlength)*10/1023;</span><br><span class="line">    pop=newpop;</span><br><span class="line">end</span><br><span class="line">fplot(&apos;9*sin(5*x)+8*cos(4*x)&apos;,[0,15])</span><br><span class="line">hold on</span><br><span class="line">plot(x,y,&apos;r*&apos;)</span><br><span class="line">hold off</span><br></pre></td></tr></table></figure>
 
+<hr>
+<p>二、算法参数设计原则</p>
+<p>1.种群的规模</p>
+<p>当种群的规模过小的时候，就会出现近亲交配，产生病态基因；种群规模较大的时候，难以收敛。种群的规模的建议值应该是0-100.</p>
+<hr>
+<p>2.变异概率</p>
+<p>当变异的概率太小，种群的多样性下降的太快，导致有效基因的迅速消失，而且不容易修补；当变异的概率过大的时候，尽管种群的多样性得到保障，但是高阶模式的被破坏概率也会随之增大。变异的概率一般取值在0.0001-0.2之间。</p>
+<hr>
+<p>3.交配概率</p>
+<p>交配概率太大容易破坏已有的有利模式，随机性增大，容易错失最优个体；交配的概率太低则不能有效的更新种群。</p>
+<hr>
+<p>4.进化代数</p>
+<p>进化代数太小，种群还没有完全成熟，算法没有收敛；进化代数太大，算法可能已经收敛或者早熟，在执行下去没有意义，进化的代数的选择一般是100-500；</p>
+<hr>
+<p>5.种群初始化</p>
 
       
     </div>
