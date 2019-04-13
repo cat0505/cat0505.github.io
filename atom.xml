@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-08T01:08:32.475Z</updated>
+  <updated>2019-04-08T07:50:55.271Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法工具箱及其使用</title>
+    <link href="http://yoursite.com/2019/04/08/%E7%AE%97%E6%B3%95%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%8F%8A%E5%85%B6%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2019/04/08/算法工具箱及其使用/</id>
+    <published>2019-04-08T01:37:00.000Z</published>
+    <updated>2019-04-08T07:50:55.271Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、ga函数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[x,fval,exitflag,output,population,scores]=ga(fitnessfcn,nvars,……options)</span><br></pre></td></tr></table></figure><p>fitnessfcn为适应度句柄函数，nvars为目标函数的自变量函数，options为函数的属性设置；</p><p>x为最佳染色体的返回值，fval为染色体的最佳适应度，exitflag为算法停止的原因，output为算法的输出结构，population为种群适应度的列向量，scores为最终的到的种群；</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">程序：</span><br><span class="line">clear</span><br><span class="line">clc</span><br><span class="line">A=[1,1;-1,2;2,1]</span><br><span class="line">B=[2,2,3]</span><br><span class="line">lb=zeros(2,1);</span><br><span class="line">[x,fval,extflag]=ga(@lincontest6,2,A,B,[],[],lb)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">x =</span><br><span class="line">    0.6670    1.3340</span><br><span class="line"></span><br><span class="line">fval =</span><br><span class="line">   -8.2258</span><br><span class="line"></span><br><span class="line">extflag =</span><br><span class="line">     1</span><br></pre></td></tr></table></figure><p>二、gaoptimest函数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">options=gaoptimest(&apos;paraml&apos;,value1,value2,……)</span><br></pre></td></tr></table></figure><p>遗传算法本质上是一种启发式的随机运算，可以将前一次运行得到的最后种群作为下一次运行的初识种群。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[x,fval,reasn,output,final_pop]=ga(@fitnessfcn,nvars)</span><br><span class="line">最后一个输出变量final_pop返回的就是上一次运行得到的最后的种群，再将final_pop作为ga函数的初识种群，语法格式如下</span><br><span class="line">options=gaoptimest(&apos;InitialPopulation&apos;,final_pop);</span><br><span class="line">[x,fval,reason,output,final_pop2]=ga(@fitnessfcn,nvars,options);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;一、ga函数&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="MATLAB" scheme="http://yoursite.com/categories/MATLAB/"/>
+    
+    
+      <category term="MATLAB" scheme="http://yoursite.com/tags/MATLAB/"/>
+    
+  </entry>
   
   <entry>
     <title>遗传算法程序设计</title>
